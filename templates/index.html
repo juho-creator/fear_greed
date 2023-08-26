@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fear and Greed Index</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Fear/Greed Index</th>
+            <th>Value</th>
+        </tr>
+        {% for entry in data %}
+        <tr>
+            <td>{{ entry.date }}</td>
+            <td>{{ entry.value_classification }}</td>
+            <td>{{ entry.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
